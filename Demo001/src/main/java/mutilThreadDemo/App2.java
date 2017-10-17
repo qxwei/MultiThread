@@ -11,7 +11,7 @@ public class App2 {
         System.out.println("虚拟机内核数："+Runtime.getRuntime().availableProcessors());
 
         Runnable r = new Runnable() {
-            int count = 100;
+            Integer count = 100;
             @Override
             public void run() {
                 threadRun(count);
@@ -38,23 +38,31 @@ public class App2 {
         ct8.start();
         ct9.start();
     }
-    private static void threadRun( int count){
-        count--;
-        System.out.println(Thread.currentThread().getName()+"--计算count,计算后值为："+count);
+    /*
+    * synchronized 无效问题？
+    * */
+    synchronized private static void threadRun( Integer count){
+        try {
+            count++;
+            System.out.println(Thread.currentThread().getName() + "--计算count,计算后值为：" + count);
+        }catch (Exception e){}
     }
 
     /**
      * 同步处理
      */
     @Test
-    public void syncVar(){
+    public void syncVar()throws Exception{
         System.out.println("虚拟机内核数："+Runtime.getRuntime().availableProcessors());
 
         Runnable r = new Thread() {
             private int count = 100;
             @Override
             synchronized public void run() {
-                threadRun(count);
+                try {
+                    count--;
+                    System.out.println(Thread.currentThread().getName() + "--计算count,计算后值为：" + count);
+                }catch (Exception e){}
             }
         };
 
@@ -77,5 +85,6 @@ public class App2 {
         ct7.start();
         ct8.start();
         ct9.start();
+        Thread.sleep(5000);
     }
 }
