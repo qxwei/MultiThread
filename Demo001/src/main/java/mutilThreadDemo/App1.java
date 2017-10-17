@@ -2,6 +2,7 @@ package mutilThreadDemo;
 
 /**
  * Created by damon on 2017/10/16.
+ * **app1:** 多线程执行的随机性
  */
 public class App1 {
     public static void main( String[] args ) throws Exception
