@@ -4,6 +4,7 @@ import org.junit.Test;
 
 /**
  * Created by damon on 2017/10/17.
+ * 共享变量的线程不安全
  * Integer 属于不可变对象，你每次修改 count 的值，其实 count 的引用都已经被改变了。你可以自己模拟一个内部值的可变的 Integer 对象：
  */
 public class App2 {
