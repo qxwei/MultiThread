@@ -1,3 +1,5 @@
+package mutilThreadDemo;
+
 import org.junit.Test;
 
 /**
