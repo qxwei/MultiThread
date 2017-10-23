@@ -19,6 +19,6 @@ public class App
         th1.start();
         th2.start();
 
-        Thread.sleep(1000);
+    //    Thread.sleep(1000);
     }
 }
