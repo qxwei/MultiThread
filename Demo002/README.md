@@ -6,8 +6,8 @@ Demo002 对象及变量的并发控制
 * **app3:** 异常锁释放 (抛出异常线程结束)
 * **app4:** synchronized 代码块同步，一些异步，一些同步
 * **app5:** synchronized static  class  object  死锁一个
-* **app6:** 线程优先级的传递性 优先级高先执行完成 跑得快和执行完先后 跟优先级高低不是必然关系
-* **app7:** 守护线程
+* **app6:** 静态内部类
+* **app7:** volatile 使变量在多个线程间可见
 
 
 * **NOTE:** 
