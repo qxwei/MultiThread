@@ -33,14 +33,15 @@ public class App1 {
                     synchronized (lock) {
                         lock.notify();
                         System.out.printf("%s:已通知\r\n", name);
+                        System.out.printf("%s,运行完成\r\n", name);
                     }
                     Thread.sleep(100);
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-                System.out.printf("%s,运行完成\r\n", name);
+
             };
-            System.out.println("演示1===开始");
+            System.out.println("演示1===开始（wait释放锁，notify不释放锁）");
             Thread t1 = new Thread(wait, "线程1号");
             Thread t2 = new Thread(notify, "通知线程1号");
             t1.start();
