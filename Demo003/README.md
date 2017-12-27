@@ -11,7 +11,7 @@ Demo003 线程间通信
 
 * **NOTE:** 
 > join 释放锁、sleep不释放锁
-> 实例变量是非线程安全的  
+> join内部是由wait实现的
 > synchronized不具有继承性  
 > 提高效率尽量缩小synchronized的范围 
 > String常量池,指向同一对象
