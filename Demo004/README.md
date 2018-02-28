@@ -1,7 +1,7 @@
 Demo004 ReentrantLock的使用
 ========
 * **app:** ReentrantLock同步
-* **app1:** 锁重入（可以再次获取自己的内部锁），父子间传递
+* **app1:** ReentrantLock的等待通知 signal、await
 * **app2:** 共享量变的线程不安全
 * **app3:** 异常锁释放 (抛出异常线程结束)
 * **app4:** synchronized 代码块同步，一些异步，一些同步
