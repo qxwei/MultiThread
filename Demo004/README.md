@@ -3,7 +3,7 @@ Demo004 ReentrantLock的使用
 * **app:** ReentrantLock同步
 * **app1:** ReentrantLock的等待通知 signal、await
 * **app2:** ReentrantLock多条件通知等待
-* **app3:** 异常锁释放 (抛出异常线程结束)
+* **app3:** ReentrantLock生产者消费者 
 * **app4:** synchronized 代码块同步，一些异步，一些同步
 * **app5:** synchronized static  class  object  死锁一个
 * **app6:** 静态内部类
